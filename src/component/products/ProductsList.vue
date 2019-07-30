@@ -34,20 +34,6 @@ export default {
         this.getProductList();
     },
     methods: {
-        // getProductsList(){
-        //     this.$http.get('api/getgoods?pageindex='+this.pageindex).then(result => {
-        //         if(result.body.status === 0){
-        //             console.log(result.body.message);
-        //             // this.productslist = result.body.message;
-        //             this.productslist = this.productslist.concat(result.body.message);
-        //             this.productslist.forEach((element,index,arr) => {
-        //                 if(element.id === 95 || element.id === 97){ //这两张图片不能用了
-        //                     arr.splice(index, 1);
-        //                 }
-        //             });
-        //         }
-        //     })
-        // },
         getProductList(){
             this.$http.get('/api/productList').then(r=>{
                 if(r.body.code === 200){

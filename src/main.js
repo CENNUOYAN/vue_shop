@@ -46,7 +46,6 @@ import router from './router.js'
 import store from './store.js'
 
 //设置请求根路径
-Vue.http.options.root = 'http://www.escook.cn:3000'
 // Vue.http.options.emulateJSON = true;
 
 var vm = new Vue({

@@ -13,15 +13,6 @@
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoslist">
                     <img src="../../images/menu2.png" alt="图文分享">
                     <div class="mui-media-body">图文分享</div></router-link></li>
-            <!-- <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../images/menu5.png" alt="视频专区">
-                    <div class="mui-media-body">视频专区</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../images/menu4.png" alt="留言反馈">
-                    <div class="mui-media-body">留言反馈</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../images/menu6.png" alt="联系我们">
-                    <div class="mui-media-body">联系我们</div></a></li> -->
         </ul> 
     </div>
 </template>
@@ -39,16 +30,7 @@ export default {
         this.getSwipeImages();
     },
     methods: {
-        // getSwipe(){
-        //     this.$http.get("api/getlunbo").then(result => {
-        //         if(result.body.status ===0 ){
-        //             this.swipeList = result.body.message;
-        //             // console.log(this.swipeList)
-        //         }else{
-        //             Toast('加载轮播图失败！')
-        //         }
-        //     })
-        // },
+        
         getSwipeImages(){
             this.$http.get('/api/getSwipeImages').then(r=>{
                 if(r.body.code === 200){
